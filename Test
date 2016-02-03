@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# This script tests the lexer on all the samples in folder step1
+echo Testing scanner.py on sample inputs. No output after diff is GOOD.
+
+echo lex fibonacci
+python scanner.py step1/inputs/fibonacci.micro >output.out
+echo diff
+diff output.out step1/outputs/fibonacci.out
+
+echo lex loop
+python scanner.py step1/inputs/loop.micro >output.out
+echo diff
+diff output.out step1/outputs/loop.out
+
+echo lex nested
+python scanner.py step1/inputs/nested.micro >output.out
+echo diff
+diff output.out step1/outputs/nested.out
+
+echo lex sqrt
+python scanner.py step1/inputs/sqrt.micro >output.out
+echo diff
+diff output.out step1/outputs/sqrt.out
